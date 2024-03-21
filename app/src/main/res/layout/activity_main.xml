@@ -10,7 +10,9 @@
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"/>
+
+
 
     <Button
         android:id="@+id/btn_add"
@@ -37,13 +39,5 @@
         android:layout_below="@id/btn_info"
         android:layout_marginTop="16dp"
         android:textSize="18sp"/>
-
-    <ImageView
-        android:id="@+id/iv_vehicle_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_vehicle_info"
-        android:layout_marginTop="16dp"
-        android:scaleType="fitCenter" />
 
 </RelativeLayout>

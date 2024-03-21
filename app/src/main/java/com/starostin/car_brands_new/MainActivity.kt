@@ -1,7 +1,6 @@
 package com.starostin.car_brands_new
 
 import android.app.AlertDialog
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +11,6 @@ import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
@@ -23,11 +21,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvVehicleInfo: TextView
 
     private val vehicleList = mutableListOf(
-        Vehicle("Toyota", true, 1500, 4),
-        Vehicle("Honda", false, 300, 2),
-        Vehicle("BMW", true, 2000, 4),
-        Vehicle("Harley Davidson", false, 500, 2),
-        Vehicle("Ford", true, 1800, 4)
+        Vehicle("Toyota", true, 1500, 4, R.drawable.supra),
+        Vehicle("Honda", false, 300, 2, R.drawable.civic),
+        Vehicle("BMW", true, 2000, 4, R.drawable.f90),
+        Vehicle("Harley Davidson", false, 500, 2, R.drawable.harley),
+        Vehicle("Ford", true, 1800, 4, R.drawable.focus)
     )
 
     private lateinit var adapter: CustomSpinnerAdapter

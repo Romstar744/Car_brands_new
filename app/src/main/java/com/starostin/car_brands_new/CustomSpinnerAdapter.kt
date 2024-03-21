@@ -37,6 +37,9 @@ class CustomSpinnerAdapter(private val context: Context, private val itemList: M
         val currentItem = itemList[position]
         val itemName = view!!.findViewById<TextView>(R.id.tv_item_name)
         itemName.text = currentItem.name
+        val itemImage = view.findViewById<ImageView>(R.id.iv_vehicle_image)
+        currentItem.imageResId?.let { itemImage.setImageResource(it) }
+
 
         val deleteIcon = view.findViewById<ImageView>(R.id.iv_delete)
         deleteIcon.setOnClickListener {
