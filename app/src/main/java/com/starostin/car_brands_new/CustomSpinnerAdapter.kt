@@ -10,7 +10,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
-
 class CustomSpinnerAdapter(private val context: Context, private val itemList: MutableList<Vehicle>) :
     BaseAdapter() {
 
@@ -30,7 +29,8 @@ class CustomSpinnerAdapter(private val context: Context, private val itemList: M
         var view = convertView
 
         if (view == null) {
-            val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val inflater =
+                context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             view = inflater.inflate(R.layout.spinner_item_with_delete_icon, parent, false)
         }
 
@@ -55,19 +55,10 @@ class CustomSpinnerAdapter(private val context: Context, private val itemList: M
                 notifyDataSetChanged()
                 Toast.makeText(context, "Элемент удален", Toast.LENGTH_SHORT).show()
             }
-            .setNegativeButton("Отмена") { dialog, _ ->
-                dialog.dismiss()
+            .setNegativeButton("Отмена") { dialog, _ -> dialog.dismiss()
             }
             .create()
             .show()
     }
-
-    fun updateData(newData: List<Vehicle>) {
-        itemList.clear()
-        itemList.addAll(newData)
-        notifyDataSetChanged()
-    }
 }
-
-
 
